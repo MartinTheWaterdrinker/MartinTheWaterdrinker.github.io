@@ -1,4 +1,3 @@
-import "./App.css"
 import React, { Dropdown } from "semantic-ui-react"
 import { Component } from "react"
 const options = [
@@ -6,7 +5,6 @@ const options = [
   { key: 2, text: "2", value: 2 },
   { key: 3, text: "3", value: 3 },
 ]
-//function App(){
 export default class DropdownExampleUncontrolled extends Component {
   state = {}
   handleValue = (e, { value }) => this.setState({ value })
@@ -26,4 +24,3 @@ export default class DropdownExampleUncontrolled extends Component {
     )
   }
 }
-//export default App
