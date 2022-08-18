@@ -1,10 +1,12 @@
 import React from "react"
-import { Container } from "semantic-ui-react"
+import { Container, Button } from "semantic-ui-react"
 import DropdownExampleUncontrolled from "./example"
 import Image from "next/image"
+
 const App = () => (
   <Container style={{ margin: 20 }}>
     <DropdownExampleUncontrolled />
+    <span>jebi se lučka</span>
   </Container>
 )
 
@@ -15,5 +17,5 @@ function customLoader({ src }) {
 }
 
 export function customImage(props) {
-  return <Image {...props} loader={customLoader} />
+  return <Image {...props} loader={customLoader} alt={pic} />
 }
