@@ -1,7 +1,7 @@
 import React from "react"
 import { Container } from "semantic-ui-react"
 import DropdownExampleUncontrolled from "./example"
-
+import Image from "next/image"
 const App = () => (
   <Container style={{ margin: 20 }}>
     <DropdownExampleUncontrolled />
@@ -14,6 +14,6 @@ function customLoader({ src }) {
   return src
 }
 
-export function Image(props) {
-  return <NextImage {...props} loader={customLoader} />
+export function customImage(props) {
+  return <Image {...props} loader={customLoader} />
 }
