@@ -7,8 +7,13 @@ const options = [
 ]
 
 export default class DropdownExampleUncontrolled extends Component {
-  state = { value: 0 }
+  state = { value: 0, number: 0 }
+
+  handleChange = (number) => this.setState({ number })
+  //this.setState({ number: value })
+
   handleValue = (e, { value }) => this.setState({ value })
+
   render() {
     const { number = 0, value } = this.state
     return (
@@ -21,13 +26,16 @@ export default class DropdownExampleUncontrolled extends Component {
           value={value}
         />
 
-        <span> value={number} </span>
+        <span> value={this.state.number} </span>
         <br />
-        <Button onClick={change} /*{this.handleValue}*/>Send</Button>
+        <Button
+          onClick={() =>
+            this.handleChange(this.state.value)
+          } /*{this.handleValue}*/
+        >
+          Send
+        </Button>
       </div>
     )
-    function change(number, value) {
-      this.state((number = value))
-    }
   }
 }

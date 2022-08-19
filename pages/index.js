@@ -6,7 +6,6 @@ import Image from "next/image"
 const App = () => (
   <Container style={{ margin: 20 }}>
     <DropdownExampleUncontrolled />
-    <span>jebi se lučka</span>
   </Container>
 )
 
